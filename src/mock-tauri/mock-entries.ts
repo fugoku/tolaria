@@ -283,6 +283,7 @@ export const MOCK_ENTRIES: VaultEntry[] = [
     icon: null,
     color: null,
     order: null,
+    outgoingLinks: [],
   },
   {
     path: '/Users/luca/Laputa/person/marco-verdi.md',
@@ -308,6 +309,7 @@ export const MOCK_ENTRIES: VaultEntry[] = [
     icon: null,
     color: null,
     order: null,
+    outgoingLinks: [],
   },
   {
     path: '/Users/luca/Laputa/person/elena-russo.md',
@@ -333,6 +335,7 @@ export const MOCK_ENTRIES: VaultEntry[] = [
     icon: null,
     color: null,
     order: null,
+    outgoingLinks: [],
   },
   {
     path: '/Users/luca/Laputa/event/2026-02-14-laputa-app-kickoff.md',
