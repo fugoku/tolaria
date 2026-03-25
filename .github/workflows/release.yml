@@ -216,6 +216,9 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    concurrency:
+      group: github-pages
+      cancel-in-progress: false
     steps:
       - uses: actions/checkout@v4
 
@@ -227,6 +230,8 @@ jobs:
           gh api repos/${{ github.repository }}/releases --paginate > _site/releases.json
           # Copy latest.json to GitHub Pages for auto-updater endpoint
           gh release download --repo ${{ github.repository }} --pattern "latest.json" --output _site/latest.json || true
+          # Preserve canary latest.json from existing GH Pages
+          curl -fsSL "https://refactoringhq.github.io/laputa-app/latest-canary.json" -o _site/latest-canary.json || true
           cat > _site/index.html << 'HTMLEOF'
           <!DOCTYPE html>
           <html lang="en">
