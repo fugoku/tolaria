@@ -1,5 +1,5 @@
 ---
-type: Project
+type: Note
 status: Active
 ---
 
