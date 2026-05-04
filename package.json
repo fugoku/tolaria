@@ -5,8 +5,8 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "dev": "node api.js && vite",
+    "build": "node api.js && tsc -b && vite build",
     "bundle-mcp": "node scripts/bundle-mcp-server.mjs",
     "lint": "eslint .",
     "l10n:translate": "lara-cli translate",
